@@ -521,55 +521,9 @@ Este trabajo establece una **base empírica sólida** para investigación futura
 
 ---
 
-## Visualizaciones
-
-### Análisis Exploratorio de Datos
-
-![EDA Completo](path/to/f1_final_eda.png)
-> **Figura EDA.** Panel de 8 visualizaciones: (1) Distribución de LapTimeDegradation, (2) CDI por circuito, (3) Degradación promedio por circuito, (4) Scatter CDI vs Degradación, (5) Fuerzas G acumuladas vs Degradación, (6) Análisis de progreso de stint, (7) Heatmap de correlación (top 15 features), (8) Resumen del dataset.
-
-### Comparación de Modelos
-
-![Comparación de Modelos](path/to/f1_model_comparison.png)
-> **Figura Modelos.** Panel de 4 visualizaciones: (1) Barras de RMSE por modelo, (2) Train vs Val RMSE (detección de overfitting), (3) Comparación de R², (4) Predictions vs Actual (scatter plot con línea de predicción perfecta).
-
-### Análisis SHAP
-
-![SHAP Analysis](path/to/f1_shap_analysis.png)
-> **Figura SHAP.** Panel de 4 visualizaciones: (1) SHAP summary bar plot (importancia de features), (2) SHAP beeswarm plot (distribución de valores SHAP), (3) SHAP dependence plot de StintBaselineLapTime, (4) SHAP dependence plot de LapTime.
-
-### Análisis por Circuito
-
-![Circuit Analysis](path/to/f1_circuit_analysis.png)
-> **Figura Circuitos.** Panel de 4 visualizaciones: (1) Actual vs Predicted degradación por circuito (barras), (2) RMSE vs CDI (scatter con anotaciones), (3) Distribución de errores por circuito (histogramas superpuestos), (4) Predictions vs Actual coloreado por circuito (scatter plot).
-
----
-
 ## Agradecimientos
 
 La autora agradece a la comunidad de código abierto de FastF1 por proporcionar acceso a datos de telemetría de alta calidad, y a los desarrolladores de scikit-learn, XGBoost y SHAP por herramientas robustas de machine learning e interpretabilidad.
-
----
-
-## Licencia
-
-Este trabajo está bajo licencia **MIT License**. Se permite uso, copia, modificación y distribución con atribución apropiada.
-
-```
-MIT License
-
-Copyright (c) 2024 Paula Andrea Abad
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
 
 ---
 
