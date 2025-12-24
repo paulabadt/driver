@@ -1,5 +1,3 @@
-# Predicción de Fatiga de Pilotos en Fórmula 1 mediante Análisis de Telemetría y Machine Learning
-
 **Autor: Paula Abad** 
 ---
 
@@ -79,7 +77,7 @@ El dataset final comprende **7,182 vueltas válidas** tras eliminación de:
 - 🏁 In-laps y out-laps de pit stops
 - 📉 Outliers estadísticos (>3σ)
 
-![Figura 1: Índice de Dificultad por Circuito (CDI)](path/to/f1_cdi_distribution.png)
+![Figura 1: Índice de Dificultad por Circuito (CDI)](https://github.com/paulabadt/driver/raw/main/cdi.png)
 > *Figura 1. Distribución del Índice de Dificultad de Circuito (CDI) en los 6 circuitos analizados. Singapore presenta la mayor demanda (8.70) mientras Abu Dhabi la menor (4.26).*
 
 ---
@@ -169,10 +167,10 @@ LapTimeDegradation = LapTime_actual - median(LapTime_primeras_3_vueltas_stint)
 - ➕ Valores **positivos**: Degradación (empeoramiento)
 - ➖ Valores **negativos**: Mejora (común en primeras vueltas)
 
-![Figura 2: Distribución de la Variable Objetivo](path/to/f1_target_distribution.png)
+![Figura 2: Distribución de la Variable Objetivo](https://github.com/paulabadt/driver/raw/main/target.png)
 > *Figura 2. Distribución de LapTimeDegradation. Valores positivos indican degradación (empeoramiento), negativos indican mejora. La distribución es aproximadamente normal con media -4.74s.*
 
-![Figura 3: Correlación entre Features Principales](path/to/f1_feature_correlations.png)
+![Figura 3: Correlación entre Features Principales](https://github.com/paulabadt/driver/raw/main/feature.png)
 > *Figura 3. Matriz de correlación de las 15 features más importantes. StintBaselineLapTime muestra correlación fuerte con LapTime (r=0.89), validando su relevancia predictiva.*
 
 ---
@@ -242,10 +240,10 @@ Partición aleatoria estratificada manteniendo distribuciones similares por circ
 - XGBoost Default: Train R² = 0.9999 → Test R² = 0.9962
 - Random Forest: Peor rendimiento absoluto (Test RMSE = 1.254s)
 
-![Figura 4: Comparación Visual de Modelos](path/to/f1_model_comparison_bars.png)
+![Figura 4: Comparación Visual de Modelos](https://github.com/paulabadt/driver/raw/main/model.png)
 > *Figura 4. Comparación de RMSE en validación entre los cuatro modelos evaluados. Regresión Lineal (oro) logra el menor error (0.776s), superando a modelos más complejos.*
 
-![Figura 5: Predicciones vs Valores Reales](path/to/f1_predictions_vs_actual.png)
+![Figura 5: Predicciones vs Valores Reales](https://github.com/paulabadt/driver/raw/main/linear.png)
 > *Figura 5. Predicciones del modelo de Regresión Lineal vs valores reales en conjunto de validación (n=500 muestras aleatorias). La concentración de puntos sobre la línea roja de predicción perfecta confirma alta precisión.*
 
 ---
@@ -278,11 +276,8 @@ Se aplicó **SHAP (SHapley Additive exPlanations)** para cuantificar contribucio
 **Interpretación operacional:**
 > La degradación es fundamentalmente **relativa** al rendimiento inicial del piloto. Las primeras 3 vueltas de cada stint sirven como "test diagnóstico" del estado del sistema piloto+auto.
 
-![Figura 6: Importancia de Features (SHAP Summary)](path/to/f1_shap_importance.png)
+![Figura 6: Importancia de Features (SHAP Summary)](https://github.com/paulabadt/driver/raw/main/shap.png)
 > *Figura 6. Importancia de features medida por valores SHAP. StintBaselineLapTime domina con 13.09, seguido por LapTime (8.58). Las 10 features restantes contribuyen <5% del poder predictivo total.*
-
-![Figura 7: Distribución de Valores SHAP](path/to/f1_shap_distribution.png)
-> *Figura 7. Distribución de valores SHAP para top 15 features. Color indica valor de la feature (rojo=alto, azul=bajo). StintBaselineLapTime y LapTime muestran impacto consistente y de alta magnitud.*
 
 ---
 
@@ -326,11 +321,11 @@ El análisis desagregado por circuito reveló **variabilidad sustancial** en pre
   - Cambios en mapeo de motor
   - Posibles efectos fisiológicos (reducción saturación O₂)
 
-![Figura 8: Error del Modelo vs Dificultad del Circuito](path/to/f1_error_vs_cdi.png)
-> *Figura 8. RMSE del modelo en función del CDI. No se observa correlación directa (Mexico City con CDI=8.20 tiene alto error por altitud, mientras Singapore con CDI=8.70 tiene bajo error), sugiriendo que factores adicionales modulan la dificultad de predicción.*
+![Figura 7: Error del Modelo vs Dificultad del Circuito](https://github.com/paulabadt/driver/raw/main/mexico.png)
+> *Figura 7. RMSE del modelo en función del CDI. No se observa correlación directa (Mexico City con CDI=8.20 tiene alto error por altitud, mientras Singapore con CDI=8.70 tiene bajo error), sugiriendo que factores adicionales modulan la dificultad de predicción.*
 
-![Figura 9: Distribución de Errores por Circuito](path/to/f1_error_distribution.png)
-> *Figura 9. Distribución de errores de predicción por circuito. Bahrain, Singapore y Abu Dhabi muestran errores concentrados cerca de cero (alta precisión), mientras Mexico City exhibe mayor dispersión.*
+![Figura 8: Distribución de Errores por Circuito](https://github.com/paulabadt/driver/raw/main/error.png)
+> *Figura 8. Distribución de errores de predicción por circuito. Bahrain, Singapore y Abu Dhabi muestran errores concentrados cerca de cero (alta precisión), mientras Mexico City exhibe mayor dispersión.*
 
 ---
 
