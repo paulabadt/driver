@@ -1,5 +1,3 @@
-# Prediction of Driver Fatigue in Formula 1 Through Telemetry Analysis and Machine Learning
-
 **Author: Paula Andrea Abad**  
 
 ---
