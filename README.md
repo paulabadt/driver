@@ -325,10 +325,10 @@ Disaggregated circuit analysis revealed **substantial variability** in predictio
   - Possible physiological effects (reduced O₂ saturation)
 
 ![Figure 7: Model Error vs Circuit Difficulty](https://github.com/paulabadt/driver/raw/main/mexico.png)
-> *Figure 8. Model RMSE as a function of CDI. No direct correlation is observed (Mexico City with CDI=8.20 has high error due to altitude, while Singapore with CDI=8.70 has low error), suggesting additional factors modulate prediction difficulty.*
+> *Figure 7. Model RMSE as a function of CDI. No direct correlation is observed (Mexico City with CDI=8.20 has high error due to altitude, while Singapore with CDI=8.70 has low error), suggesting additional factors modulate prediction difficulty.*
 
 ![Figure 8: Error Distribution by Circuit](https://github.com/paulabadt/driver/raw/main/error.png)
-> *Figure 9. Distribution of prediction errors by circuit. Bahrain, Singapore, and Abu Dhabi show errors concentrated near zero (high precision), while Mexico City exhibits greater dispersion.*
+> *Figure 8. Distribution of prediction errors by circuit. Bahrain, Singapore, and Abu Dhabi show errors concentrated near zero (high precision), while Mexico City exhibits greater dispersion.*
 
 ---
 
