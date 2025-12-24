@@ -1,10 +1,6 @@
 # Predicción de Fatiga de Pilotos en Fórmula 1 mediante Análisis de Telemetría y Machine Learning
 
-**Paula Andrea Abad**  
-*Data Scientist*  
-*Pereira, Risaralda, Colombia*  
-*paula@paulabad.tech*
-
+**Autor: Paula Abad** 
 ---
 
 ## Resumen
