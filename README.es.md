@@ -531,7 +531,8 @@ Si utilizas este trabajo, por favor cita:
   title={Predicción de Fatiga de Pilotos en Fórmula 1 mediante Análisis de Telemetría y Machine Learning},
   author={Abad, Paula},
   journal={Technical Report},
-  year={2025}
+  year={2025},
+  url={https://www.paulabad.tech/proyectos/driver}
 }
 ```
 
@@ -539,7 +540,6 @@ Si utilizas este trabajo, por favor cita:
 
 **Última actualización:** Diciembre 2025  
 **Versión:** 1.0  
-**DOI:** [Pendiente]
 
 ---
 
