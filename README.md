@@ -533,7 +533,7 @@ If you use this work, please cite:
   author={Abad, Paula},
   journal={Technical Report},
   year={2025},
-  url={https://github.com/paulaabad/f1-fatigue-prediction}
+  url={https://www.paulabad.tech/proyectos/driver}
 }
 ```
 
